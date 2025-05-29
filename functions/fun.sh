@@ -2,8 +2,8 @@
 
 USER_ID=$(id -u)
 
-check_root (){
-    if [ $? -ne 0 ]; then
+check_root(){
+    if [ $USER_ID -ne 0 ]; then
         echo "you have sudo accesses to execute this"
         exit 1
     fi
@@ -12,7 +12,7 @@ check_root (){
 
 check_root
 
-validate (){
+validate(){
     if [ $1 -ne 0 ]; then
                 echo "$2 installing failure"
                 exit 1
