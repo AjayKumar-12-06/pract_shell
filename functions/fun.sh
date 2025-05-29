@@ -21,11 +21,11 @@ validate(){
             fi 
 }
 
-dnf list installed git 
+dnf list installed tree 
 if [ $? -ne 0 ]; then
-    echo "if git is not available, now going to installing git"
-        dnf install git -y
-            validate $? "installing git"
+    echo "if tree is not available, now going to installing tree"
+        dnf install tree -y
+            validate $? "installing tree"
 else
-    echo "git is already available."
+    echo "tree is already available."
 fi
