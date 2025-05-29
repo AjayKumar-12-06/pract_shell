@@ -3,9 +3,9 @@
 Number1=$1
 Number2=$2
 
-Tiemstamp=$(date)
+Timestamp=$(date)
 
-echo "Scripted Executed at $Timestamp"
+echo "Scripted Executed at : " $Timestamp
 
 Sum=$(($Number1+$Number2))
 
