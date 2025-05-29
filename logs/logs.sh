@@ -38,12 +38,12 @@ fi
 
 check_root
 
-dnf list installed mysql &>>$log_file_name
+dnf list installed pyhton &>>$log_file_name
     if [ $? -ne 0 ]; then
-        echo "Checking mysql is installed or not, if not now i'm going to installing java"
-            dnf install mysql -y &>>$log_file_name
-            validate $? "installing mysql"
+        echo "Checking python is installed or not, if not now i'm going to installing java"
+            dnf install python -y &>>$log_file_name
+            validate $? "installing python"
     else
-        echo -e "already mysql is installed $Y Skipp $N"
+        echo -e "already python is installed $Y Skipp $N"
     fi
 
