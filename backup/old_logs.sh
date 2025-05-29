@@ -3,4 +3,4 @@
 while read -r line
 do
     echo $line
-done < colors.sh
+done < hello.sh
