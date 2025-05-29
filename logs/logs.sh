@@ -23,7 +23,7 @@ validate() {
     fi
 }
 
-sudo mkdir -p /var/log/script.log
+
 
 echo "Script started executing at: $Timestamp" &>>$log_file_name
  
