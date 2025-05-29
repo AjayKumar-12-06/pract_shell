@@ -23,6 +23,7 @@ validate() {
         exit 1
     else
         echo -e "$2 ....$G Success $N"
+    fi
 }
 
 dnf list installed java 
