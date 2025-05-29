@@ -41,7 +41,7 @@ validate $? "disbale nodejs"
 dnf module enable nodejs:20 -y &>>$log_file_name
 validate $? "enable nodejs 20"
 
-dnf install node js &>>$log_file_name
+dnf install nodejs &>>$log_file_name
 validate $? "installing nodejs"
 
 id expense
