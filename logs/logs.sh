@@ -40,7 +40,7 @@ check_root
 
 dnf list installed pyhton &>>$log_file_name
     if [ $? -ne 0 ]; then
-        echo "Checking python is installed or not, if not now i'm going to installing java"
+        echo "Checking python is installed or not, if not now i'm going to installing java" &>>$log_file_name
             dnf install python -y &>>$log_file_name
             validate $? "installing python"
     else
