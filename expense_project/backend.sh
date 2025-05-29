@@ -70,7 +70,7 @@ validate $? "unzip the backend"
 npm install &>>$log_file_name
 validate $? "installing dependences"
 
-cp /home/ec2-user/backend.service /etc/systemd/system/backend.service &>>$log_file_name
+cp /home/ec2-user/pract_shell/expense_project /etc/systemd/system/backend.service &>>$log_file_name
 
 #scema creating
 dnf install mysql -y &>>$log_file_name
