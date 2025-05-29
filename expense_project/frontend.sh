@@ -59,6 +59,7 @@ unzip /tmp/frontend.zip &>>$log_file_name
 validate $? "Unzip the code"
 
 cp /home/ec2-user/pract_shell/expense_project/expense.conf /etc/nginx/default.d/expense.conf &>>$log_file_name
+validate $? "copied expense conf"
 
 systemctl restart nginx &>>$log_file_name
 validate $? "restarted nginx"
