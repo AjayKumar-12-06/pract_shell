@@ -8,7 +8,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-log_file="var/log/expense.log"
+log_file="/var/log/expense.log"
 log_folder=$(echo $0 | cut -d "." -f1)
 Timestamp=$(date +%y-%m-%d-%H-%M-%S)
 log_file_name=$log_file/$log_folder-$Timestamp
