@@ -12,7 +12,7 @@ log_file=$(echo $0 | cut -d "." -f1)
 Timestamp=$(date +%y-%m-%d-%H-%M-%S)
 log_file_name=$log_folder/$log_file-$Timestamp
 
-mkdir -p /var/log/script.log
+
 
 validate() {
     if [ $1 -ne 0 ]; then
@@ -23,8 +23,11 @@ validate() {
     fi
 }
 
+mkdir -p /var/log/script.log
 
 echo "Script started executing at: $Timestamp" &>>$log_file_name
+ 
+
 check_root(){
 
 if [ $USER_ID -ne 0 ]; then
