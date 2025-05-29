@@ -26,12 +26,12 @@ validate() {
     fi
 }
 
-dnf list installed java 
+dnf list installed mysql
     if [ $? -ne 0 ]; then
-        echo "Checking java is installed or not, if not now i'm going to installing java"
-            dnf install java -y
-            validate $? "installing java"
+        echo "Checking mysql is installed or not, if not now i'm going to installing java"
+            dnf install mysql -y
+            validate $? "installing mysql"
     else
-        echo -e "echo already java is inatllad $Y Skipp $N"
+        echo -e "already mysql is installed $Y Skipp $N"
     fi
 
