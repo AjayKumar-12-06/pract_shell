@@ -44,13 +44,13 @@ validate $? "enable nodejs 20"
 dnf install nodejs -y &>>$log_file_name
 validate $? "installing nodejs"
 
-id expense
+id expense &>>$log_file_name
 if [ $? -ne 0 ]; then
     echo "checking expense id there or not, if not now i'm going to creating"
         useradd expense
         validate $? "expense user created"
 else 
-    echo "expense user already created"
+    echo -e "expense user already created... $Y Skipp $N"
 fi
 
 mkdir -p /app
