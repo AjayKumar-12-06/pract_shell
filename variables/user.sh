@@ -6,7 +6,7 @@ read User_Name
 echo "Enter password"
 read -s Password
 
-echo "User_Name"
 
-echo "Password"
+
+
 
