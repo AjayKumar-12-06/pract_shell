@@ -76,7 +76,7 @@ cp /home/ec2-user/pract_shell/expense_project /etc/systemd/system/backend.servic
 dnf install mysql -y &>>$log_file_name
 validate $? "installing mysql"
 
-mysql -h mysql.myfooddy.fun -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file_name
+mysql -h mysql.myfoody.fun -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file_name
 validate $? "schema creating"
 
 systemctl daemon-reload &>>$log_file_name
