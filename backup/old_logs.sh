@@ -3,4 +3,4 @@
 while read -r line
 do
     echo $line
-done < pract_shell/colors/colors.sh
+done < ./pract_shell/colors/colors.sh
