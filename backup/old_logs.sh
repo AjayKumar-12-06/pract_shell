@@ -10,4 +10,4 @@ do
     echo "Delete file: $file"
     rm -rf $file
 
-done <<< $File_SOurce
+done <<< $File_Source
