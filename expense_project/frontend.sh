@@ -37,28 +37,28 @@ check_root() {
 
 check_root
 
-dnf install nginx -y
+dnf install nginx -y &>>$log_file_name
 validate $? "installing nginx"
 
-systemctl enable nginx
+systemctl enable nginx &>>$log_file_name
 validate $? "enables  nginx"
 
-systemctl start nginx
+systemctl start nginx &>>$log_file_name
 validate $? "started nginx"
 
-rm -rf /usr/share/nginx/html/*
+rm -rf /usr/share/nginx/html/* &>>$log_file_name
 validate $? "remove the existing code"
 
-curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip &>>$log_file_name
 validate $? "download the code"
 
-cd /usr/share/nginx/html
+cd /usr/share/nginx/html &>>$log_file_name
 validate $? "moving to html"
 
-unzip /tmp/frontend.zip
+unzip /tmp/frontend.zip &>>$log_file_name
 validate $? "Unzip the code"
 
-cp /home/ec2-user/pract_shell/expense_project/frontend.conf /etc/nginx/default.d/frontend.conf
+cp /home/ec2-user/pract_shell/expense_project/frontend.conf /etc/nginx/default.d/frontend.conf &>>$log_file_name
 
-systemctl restart nginx
+systemctl restart nginx &>>$log_file_name
 validate $? "restarted nginx"
