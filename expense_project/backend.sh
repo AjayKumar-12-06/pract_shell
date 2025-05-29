@@ -42,7 +42,7 @@ dnf module enable nodejs:20 -y &>>$log_file_name
 validate $? "enable nodejs 20"
 
 dnf install node js &>>$log_file_name
-validate $? "installing node js"
+validate $? "installing nodejs"
 
 id expense
 if [ $? -ne 0 ]; then
