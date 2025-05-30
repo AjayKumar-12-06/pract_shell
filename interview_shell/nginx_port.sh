@@ -9,7 +9,7 @@ fi
 
 port=$(netstat -lntp | grep -i tcp | grep -i -w nginx | awk -F " " '{print $4}' | cut -d ":" -f2)
 
-if [ $port == "80" ]; then
+if [ "${port}" == "80" ]; then
     echo "nginx is running"
 else
     echo "nginx is not running"
