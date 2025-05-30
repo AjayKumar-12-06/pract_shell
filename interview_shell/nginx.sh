@@ -7,7 +7,7 @@ if [ $USER_ID -ne 0 ]; then
     exit 1
 fi
 
-status=systemctl status nginx
+status=$(systemctl status nginx)
 
 if [ $status -ne 0 ];then
     echo "Nginx is not runnig"
